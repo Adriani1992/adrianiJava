@@ -4,18 +4,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Point first = new Point(6,5);
-		Point second = new Point(3,1);
-		
-		System.out.println("distance(0,0)= " + first.distance());
-		System.out.println("distance(second)= " + first.distance(second));
-		System.out.println("distance(2,2)= " + first.distance(2,2));
-		
-		Point point = new Point();
-		System.out.println("distance()= " + point.distance());
-		
-		
-		
+		Printer printer = new Printer(50, true);
+		System.out.println(printer.addToner(50));
+		System.out.println("initial page count = " + printer.getPagesPrinted());
+		int pagesPrinted = printer.printPage(4);
+		System.out.println("Pages printed was " + pagesPrinted + " new total print count for printer = " + printer.getPagesPrinted());
+		pagesPrinted = printer.printPage(2);
+		System.out.println("Pages printed was " + pagesPrinted + " new total print count for printer = " + printer.getPagesPrinted());
 	}
 	
 
